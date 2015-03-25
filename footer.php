@@ -10,10 +10,13 @@
 
 			</footer>
 			<!-- /footer -->
-
+		
+			</div>  <!-- /main_content -->
+		</div>  <!-- /main -->
+		
 		</div>
 		<!-- /wrapper -->
-
+		
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->

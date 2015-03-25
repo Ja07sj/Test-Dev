@@ -72,7 +72,7 @@ function html5blank_nav()
 		'container'       => 'div',
 		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu',
+		'menu_class'      => 'menu-nav',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -120,7 +120,7 @@ function html5blank_styles()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('html5blank', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }
 
@@ -458,8 +458,7 @@ function cwd_wp_bootstrap_scripts_styles() {
   wp_enqueue_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'),'3.0.0', true );
   // Loads Bootstrap minified CSS file.
   wp_enqueue_style('bootstrapwp', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', false ,'3.3.4');
-  // Loads our main stylesheet.
-  wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', array('bootstrapwp') ,'1.0');
+  
 }
 add_action('wp_enqueue_scripts', 'cwd_wp_bootstrap_scripts_styles');
 
