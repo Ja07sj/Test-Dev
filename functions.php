@@ -93,12 +93,16 @@ function html5blank_nav()
 function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-
+		/*
     	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
+		*/
+		
+		 wp_register_script('production_min', get_template_directory_uri() . '/js/build/production.min.js', array(), '2.7.1'); // Production Minified
+        wp_enqueue_script('production_min'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
@@ -112,6 +116,23 @@ function html5blank_conditional_scripts()
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
+}
+
+/**
+	Production Scripts production_min
+ */
+function production_min(){
+
+    // Use `get_stylesheet_directoy_uri() if your script is inside your theme or child theme.
+    wp_register_script( 'production_min', get_stylesheet_directory_uri() . '/js/build/production.min.js' );
+
+    // Let's enqueue a script only to be used on a specific page of the site
+ 
+
+        // Enqueue a script that has both jQuery (automatically registered by WordPress)
+        // and my-script (registered earlier) as dependencies.
+        wp_enqueue_script( 'production_min', get_stylesheet_directory_uri() . '/js/build/production.min.js', array( 'jquery', 'production_min' ) );
+  
 }
 
 // Load HTML5 Blank styles
