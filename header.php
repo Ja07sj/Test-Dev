@@ -21,7 +21,11 @@
             tests: {}
         });
         </script>
-
+		
+		
+		
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.anythingslider.min.js"></script>
+		
 	</head>
 	<body <?php body_class(); ?>>
 
@@ -33,3 +37,4 @@
 			<!-- /header -->
 		<div class="main">
 			<div class="main_content">
+				<div class="category_slider">

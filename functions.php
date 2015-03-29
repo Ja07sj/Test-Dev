@@ -20,6 +20,15 @@ if (!isset($content_width))
     $content_width = 900;
 }
 
+function cwd_wp_bootstrap_scripts_styles() {
+  // Loads Bootstrap minified JavaScript file.
+  wp_enqueue_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'),'3.0.0', true );
+  // Loads Bootstrap minified CSS file.
+  wp_enqueue_style('bootstrapwp', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', false ,'3.3.4');
+  
+}
+add_action('wp_enqueue_scripts', 'cwd_wp_bootstrap_scripts_styles');
+
 if (function_exists('add_theme_support'))
 {
     // Add Menu Support
@@ -101,8 +110,13 @@ function html5blank_header_scripts()
         wp_enqueue_script('modernizr'); // Enqueue it!
 		*/
 		
+		
+		
 		 wp_register_script('production_min', get_template_directory_uri() . '/js/build/production.min.js', array(), '2.7.1'); // Production Minified
         wp_enqueue_script('production_min'); // Enqueue it!
+		
+		wp_register_script('anythingslider', get_template_directory_uri() . '/js/jquery.anythingslider.js', array(), '2.7.1'); // anythingslider
+        wp_enqueue_script('anythingslider'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
@@ -143,6 +157,9 @@ function html5blank_styles()
 
     wp_register_style('html5blank', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
+	
+	 wp_register_style('anythingslider', get_template_directory_uri() . '/css/anythingslider.css', array(), '1.0', 'all');
+    wp_enqueue_style('anythingslider'); // Enqueue it!
 }
 
 
@@ -474,13 +491,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-function cwd_wp_bootstrap_scripts_styles() {
-  // Loads Bootstrap minified JavaScript file.
-  wp_enqueue_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'),'3.0.0', true );
-  // Loads Bootstrap minified CSS file.
-  wp_enqueue_style('bootstrapwp', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', false ,'3.3.4');
-  
-}
-add_action('wp_enqueue_scripts', 'cwd_wp_bootstrap_scripts_styles');
+
 
 ?>

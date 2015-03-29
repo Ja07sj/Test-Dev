@@ -1,16 +1,7 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
+			
 			<!-- /footer -->
-		
+				</div> <!-- Category slider -->
 			</div>  <!-- /main_content -->
 		</div>  <!-- /main -->
 		
@@ -32,8 +23,13 @@
 							<?php html5blank_nav(); ?>
 						</nav>
 						<!-- /nav -->
-
+					
 				</header>
+				
+					<div id="externalNav">
+						<a href="#" data-slide="1">1</a>
+						<a href="#" data-slide="2">2</a>
+					</div>
 				</div>
 			</div>
 		
@@ -51,6 +47,35 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
+		
+		<script>
+		jQuery(function($) {
+			$('.category_slider').anythingSlider({	
+				mode                : "vertical",
+				buildStartStop      : false,		 
+			})
+		});
+		
+		jQuery(function($) {
+			$('.interior_slider').anythingSlider({	
+				mode                : "horizontal",	
+				buildStartStop      : false,
+				
+			})	
+		});
 
+		jQuery(function($) {
+			$('.next-slide').click(function(){
+				$('.interior_slider').data('AnythingSlider').goForward(); 
+			});
+		});
+		
+		jQuery(function($) {
+			$('.prev-slide').click(function(){
+				$('.interior_slider').data('AnythingSlider').goBack(); 
+			});
+		});
+		
+		</script>
 	</body>
 </html>
