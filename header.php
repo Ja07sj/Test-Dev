@@ -37,4 +37,4 @@
 			<!-- /header -->
 		<div class="main">
 			<div class="main_content">
-				<div class="category_slider">
+				

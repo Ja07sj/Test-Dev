@@ -172,6 +172,7 @@ width:50% !important;
 height:50% !important;
 background-color:#cc2222 !important;
 float:left;
+position:relative;
 }
 
 .interior_bottom{
@@ -207,6 +208,48 @@ object-fit:cover;
 width:100%;
 height:100%;
 }
+
+/* Arrows */
+
+.anythingSlider .arrow span{
+visibility:hidden;
+}
+
+.anythingSlider-default .arrow a{
+margin-top:5px;
+height:20px;
+}
+
+.anythingSlider-default .forward {
+  right: 0;
+  top:0;
+}
+
+.anythingSlider-default .back {
+  right: 45px;
+  left:auto;
+  top:0;
+}
+
+.back a span{
+content: " ";
+}
+
+.back a span:before{
+font-family: FontAwesome;
+content: "\f053";
+font-weight:bold;
+visibility:visible;
+}
+
+
+.forward a span:after{
+font-family: FontAwesome;
+content: "\f054";
+font-weight:bold;
+visibility:visible;
+}
+
 
 /* wrapper */
 .wrapper {

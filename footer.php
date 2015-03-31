@@ -1,10 +1,5 @@
-			<!-- footer -->
-			
-			<!-- /footer -->
-				</div> <!-- Category slider -->
-			</div>  <!-- /main_content -->
-		</div>  <!-- /main -->
-		
+		</div> <!-- Main -->
+	</div>  <!-- Main Content -->
 		<div class="menu">
 				<div class="menu_content">
 				<header class="header clear" role="banner">
@@ -23,12 +18,27 @@
 							<?php html5blank_nav(); ?>
 						</nav>
 						<!-- /nav -->
-					
+						
 				</header>
 				
 					<div id="externalNav">
-						<a href="#" data-slide="1">1</a>
-						<a href="#" data-slide="2">2</a>
+						
+						<?php $x = 0 ?>
+						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+							<?php $x++ ?>
+							
+						<a href="#" data-slide="<?php echo $x ?>"><?php echo $post->post_name?></a>
+						<?php endwhile; ?>
+
+						<?php else: ?>
+						
+						<!-- article -->
+						<article>
+						<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+						</article>
+						<!-- /article -->
+
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -52,30 +62,32 @@
 		jQuery(function($) {
 			$('.category_slider').anythingSlider({	
 				mode                : "vertical",
-				buildStartStop      : false,		 
-			})
+				expand				: true,
+				buildStartStop      : false,
+				buildArrows			: false,
+				buildNavigation			: false
+			});
 		});
 		
 		jQuery(function($) {
 			$('.interior_slider').anythingSlider({	
-				mode                : "horizontal",	
+				mode                : "horizontal",
+				expand				: true,
 				buildStartStop      : false,
-				
-			})	
+				buildArrows			: true,
+				buildNavigation			: false
+			});
 		});
 
-		jQuery(function($) {
-			$('.next-slide').click(function(){
-				$('.interior_slider').data('AnythingSlider').goForward(); 
-			});
-		});
+		
 		
 		jQuery(function($) {
-			$('.prev-slide').click(function(){
-				$('.interior_slider').data('AnythingSlider').goBack(); 
+		$('#externalNav a').click(function(){
+				var slide = $(this).attr('data-slide');
+				$('.category_slider').anythingSlider(slide);
+				return false;
 			});
 		});
-		
 		</script>
 	</body>
 </html>
