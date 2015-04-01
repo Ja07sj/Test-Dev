@@ -88,6 +88,14 @@
 				return false;
 			});
 		});
+		
+		jQuery(function($) {
+		$('.index_title a').click(function(){
+				var slide = $(this).attr('data-slide');
+				$('.interior_slider').anythingSlider(slide);
+				return false;
+			});
+		});
 		</script>
 	</body>
 </html>

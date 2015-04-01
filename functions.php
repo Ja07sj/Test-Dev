@@ -20,6 +20,13 @@ if (!isset($content_width))
     $content_width = 900;
 }
 
+function sr_dash_redirect() {
+  if( is_admin() && !current_user_can('administrator') && !DOING_AJAX) {
+    wp_redirect( home_url() );
+  }
+}
+add_action('init', 'sr_dash_redirect' );
+
 function cwd_wp_bootstrap_scripts_styles() {
   // Loads Bootstrap minified JavaScript file.
   wp_enqueue_script('bootstrapjs', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'),'3.0.0', true );
