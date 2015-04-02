@@ -12,8 +12,8 @@
 			
 			
 			
-			<?php
-			// check if the repeater field has rows of data
+				<?php
+				// check if the repeater field has rows of data
 				if( have_rows('slide_repeater') ):
 					// loop through the rows of data
 					while ( have_rows('slide_repeater') ) : the_row();?>
@@ -25,6 +25,7 @@
 				// no rows found
 				endif;
 				?>
+				
 						
 		</div>		 <!-- Interior Slider -->		
     </div> <!-- Category Slide -->
