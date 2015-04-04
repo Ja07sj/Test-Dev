@@ -36,9 +36,12 @@ module.exports = function(grunt) {
 		watch: {
 			files: "./css/*.less",
 			tasks: ["less"]
-		}
+		},
 
-		
+		watch: {
+			files: "./js/*.js",
+			tasks: ["concat", "uglify"]
+		}
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
