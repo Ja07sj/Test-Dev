@@ -30,8 +30,14 @@
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
-		<div class="wrapper">
-
+		<div class="wrapper" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/scan_lines.png')">
+			<div class="video_wrapper">
+				<video id="video1" loop autoplay    preload="auto" poster="<?php echo get_template_directory_uri(); ?>/img/loop.jpg">
+				<source src="<?php echo get_template_directory_uri(); ?>/img/loop.mp4" type="video/mp4" />
+				<source src="<?php echo get_template_directory_uri(); ?>/img/loop.webm" type="video/webm" />
+				<source src="<?php echo get_template_directory_uri(); ?>/img/loop.ogv" type="video/ogg" />
+			</video>
+			</div>
 			<!-- header -->
 			
 			<!-- /header -->
