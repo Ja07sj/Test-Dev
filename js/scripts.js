@@ -13,11 +13,16 @@
 
 
 
-		// Call polyfill to fit in images
-		document.addEventListener('DOMContentLoaded', function () {
-			objectFit.polyfill({
-				selector: 'img',
-				fittype: 'cover'
-			});
-		});
 
+		
+objectFit.polyfill({
+        selector: 'img', // this can be any CSS selector
+        fittype: 'cover', // either contain, cover, fill or none
+        disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+});
+
+objectFit.polyfill({
+        selector: 'video', // this can be any CSS selector
+        fittype: 'cover', // either contain, cover, fill or none
+        disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+});

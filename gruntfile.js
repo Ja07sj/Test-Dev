@@ -34,13 +34,8 @@ module.exports = function(grunt) {
 		},
 		// running `grunt watch` will watch for changes
 		watch: {
-			files: "./css/*.less",
-			tasks: ["less"]
-		},
-
-		watch: {
-			files: "./js/*.js",
-			tasks: ["concat", "uglify"]
+			files: ["./css/*.less", "./js/*.js"],
+			tasks: ["less", "concat", "uglify"]
 		}
     });
 

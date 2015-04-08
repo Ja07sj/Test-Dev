@@ -997,4 +997,4 @@
 		});
 	};
 
-})(jQuery, window, document);
+});

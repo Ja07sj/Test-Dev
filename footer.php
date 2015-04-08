@@ -2,32 +2,24 @@
 	</div>  <!-- Main Content -->
 		<div class="menu">
 				<div class="menu_content">
+				
 				<header class="header clear" role="banner">
 					
-						<!-- logo -->
-						<div class="logo">
-							<a href="<?php echo home_url(); ?>">
-								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-							</a>
-						</div>
-						<!-- /logo -->
+						
 
-						<!-- nav -->
-						<nav class="nav" role="navigation">
-							<?php html5blank_nav(); ?>
-						</nav>
-						<!-- /nav -->
+						
 						
 				</header>
 				
 					<div id="externalNav">
 						
-						<?php $x = 0 ?>
+						
+						
+						<?php $x = 1 ?>
 						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 							<?php $x++ ?>
 							
-						<a href="#" data-slide="<?php echo $x ?>"><?php echo $post->post_name?></a>
+						<a href="#" data-slide="<?php echo $x ?>"><?php echo $post->post_name?></a><br/>
 						<?php endwhile; ?>
 
 						<?php else: ?>
@@ -39,7 +31,16 @@
 						<!-- /article -->
 
 						<?php endif; ?>
-					</div>
+						<!-- logo -->
+						<div class="logo">
+							<a href="#" data-slide="1">
+								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+								<img src="<?php echo get_template_directory_uri(); ?>/img/title.png" alt="Logo" class="logo-img">
+							</a>
+						</div>
+						<!-- /logo -->
+					</div>	
+					
 				</div>
 			</div>
 		
