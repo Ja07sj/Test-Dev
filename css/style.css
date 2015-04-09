@@ -14,6 +14,23 @@
     MAIN
 \*------------------------------------*/
 /* LESS Color definitions */
+/*------------------------------------*\
+    ../fonts
+\*------------------------------------*/
+@font-face {
+  font-family: 'toronto_subwaybold';
+  src: url('../fonts/TorontoSubwayBold-webfont.eot');
+  src: url('../fonts/TorontoSubwayBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/TorontoSubwayBold-webfont.woff2') format('woff2'), url('../fonts/TorontoSubwayBold-webfont.woff') format('woff'), url('../fonts/TorontoSubwayBold-webfont.ttf') format('truetype'), url('../fonts/TorontoSubwayBold-webfont.svg#toronto_subwaybold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'toronto_subwayregular';
+  src: url('../fonts/TorontoSubwayRegular-webfont.eot');
+  src: url('../fonts/TorontoSubwayRegular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/TorontoSubwayRegular-webfont.woff2') format('woff2'), url('../fonts/TorontoSubwayRegular-webfont.woff') format('woff'), url('../fonts/TorontoSubwayRegular-webfont.ttf') format('truetype'), url('../fonts/TorontoSubwayRegular-webfont.svg#toronto_subwayregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* global box-sizing */
 *,
 *:after,
@@ -56,6 +73,8 @@ a {
 }
 a:hover {
   color: #444;
+  text-decoration: none;
+  transition: color 0.25s;
 }
 a:focus {
   outline: 0;
@@ -123,9 +142,30 @@ input:focus {
 #externalNav a {
   text-align: right;
   padding-bottom: 5px;
-  font-size: 20px;
+  font-size: 25px;
   width: 100%;
   display: inline-block;
+  font-family: 'toronto_subwayregular';
+  text-transform: uppercase;
+  color: #dddddd;
+}
+#externalNav a:focus.web-design {
+  color: #a25a12;
+}
+#externalNav a:focus.graphic-design {
+  color: #a27612;
+}
+#externalNav a:focus.team-work {
+  color: #a22312;
+}
+.graphic-design a {
+  color: #a25a12;
+}
+.graphic-design_color {
+  color: #a25a12;
+}
+.graphic-design_background {
+  background-color: #a25a12;
 }
 .logo {
   margin-top: 50px;
@@ -162,11 +202,19 @@ input:focus {
 .index_title {
   position: absolute;
   width: calc(100% -  25px);
-  background-color: white;
   height: 75px;
   top: calc(50% -  25px * 2);
   padding-top: 25px;
   text-align: center;
+  font-family: 'toronto_subwayregular';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.index_title a {
+  color: #dddddd;
+}
+.index_title a:hover {
+  color: #ffffff;
 }
 .interior {
   width: 50%;
@@ -267,6 +315,7 @@ p {
   width: 100%;
   margin: auto;
   position: relative;
+  overflow: hidden;
 }
 /* header */
 /* logo */
@@ -284,8 +333,8 @@ p {
 \*------------------------------------*/
 @font-face {
   font-family: 'Font-Name';
-  src: url('fonts/font-name.eot');
-  src: url('fonts/font-name.eot?#iefix') format('embedded-opentype'), url('fonts/font-name.woff') format('woff'), url('fonts/font-name.ttf') format('truetype'), url('fonts/font-name.svg#font-name') format('svg');
+  src: url('../fonts/font-name.eot');
+  src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'), url('../fonts/font-name.woff') format('woff'), url('../fonts/font-name.ttf') format('truetype'), url('../fonts/font-name.svg#font-name') format('svg');
   font-weight: normal;
   font-style: normal;
 }

@@ -7,8 +7,8 @@
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<div class="category_slide_home" id="home_slide">
 	</div>
-    <div class="category_slide" id="<?php echo $post->post_name?>">
-		<div class="interior_slider">
+    <div class="category_slide <?php echo $post->post_name?>" id="<?php echo $post->post_name?>">
+		<div class="interior_slider ">
 
 			<?php get_template_part( 'index_pane' ); ?>
 			

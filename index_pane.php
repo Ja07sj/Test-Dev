@@ -12,7 +12,7 @@
 								<img src="<?php
 								// display a sub field value
 								the_field('index_image_01'); ?>">
-								<span class="index_title"><a href="#" data-slide="2"><?php
+								<span class="index_title <?php echo $post->post_name?>_background"><a href="#" data-slide="2"><?php
 								// display a sub field value
 								the_field('index_text_01'); ?></a>
 								</span>
@@ -43,7 +43,7 @@
 								<img src="<?php
 								// display a sub field value
 								the_field('index_image_02'); ?>">
-								<span class="index_title"><a href="#" data-slide="3"><?php
+								<span class="index_title <?php echo $post->post_name?>_background"><a href="#" data-slide="3"><?php
 								// display a sub field value
 								the_field('index_text_02'); ?></a>
 								</span>
@@ -71,7 +71,7 @@
 								<img src="<?php
 								// display a sub field value
 								the_field('index_image_03'); ?>">
-								<span class="index_title"><a href="#" data-slide="4"><?php
+								<span class="index_title <?php echo $post->post_name?>_background"><a href="#" data-slide="4"><?php
 								// display a sub field value
 								the_field('index_text_03'); ?></a>
 								</span>
@@ -109,7 +109,7 @@
 								<img src="<?php
 								// display a sub field value
 								the_field('index_image_04'); ?>">
-								<span class="index_title"><a href="#" data-slide="5"><?php
+								<span class="index_title <?php echo $post->post_name?>_background"><a href="#" data-slide="5"><?php
 								// display a sub field value
 								the_field('index_text_04'); ?></a>
 									</span>

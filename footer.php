@@ -19,7 +19,7 @@
 						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 							<?php $x++ ?>
 							
-						<a href="#" data-slide="<?php echo $x ?>"><?php echo $post->post_name?></a><br/>
+						<a href="#" data-slide="<?php echo $x ?>" class="<?php echo $post->post_name?>"><?php echo $post->post_title?></a><br/>
 						<?php endwhile; ?>
 
 						<?php else: ?>
@@ -66,7 +66,8 @@
 				expand				: true,
 				buildStartStop      : false,
 				buildArrows			: false,
-				buildNavigation			: false
+				buildNavigation			: false,
+				hashTags:false
 			});
 		});
 		
@@ -76,7 +77,8 @@
 				expand				: true,
 				buildStartStop      : false,
 				buildArrows			: true,
-				buildNavigation			: false
+				buildNavigation			: false,
+				hashTags:false
 			});
 		});
 
