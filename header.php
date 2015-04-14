@@ -22,7 +22,7 @@
         });
         </script>
 		
-		
+		<script src="<?php echo get_template_directory_uri(); ?>/js/shadowbox.js"></script>
 		
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.anythingslider.min.js"></script>
 		

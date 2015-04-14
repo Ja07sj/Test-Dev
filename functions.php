@@ -162,6 +162,9 @@ function html5blank_styles()
 	wp_register_style('anythingslider', get_template_directory_uri() . '/css/anythingslider.css', array(), '1.0', 'all');
     wp_enqueue_style('anythingslider'); // Enqueue it!
 	
+	wp_register_style('shadowbox', get_template_directory_uri() . '/css/shadowbox.css', array(), '1.0', 'all');
+    wp_enqueue_style('shadowbox'); // Enqueue it!
+	
 	wp_register_style('object-fit', get_template_directory_uri() . '/css/polyfill.object-fit.css', array(), '1.0', 'all');
     wp_enqueue_style('object-fit'); // Enqueue it!
 	

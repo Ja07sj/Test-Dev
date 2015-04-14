@@ -1,13 +1,22 @@
 <div class="interior_slide" id="<?php echo $post->post_name?>">
 							<div class="interior interior_top interior_left">
-								<img src="<?php
+								<span class="index_title <?php echo $post->post_name?>_background"><a href="<?php
 								// display a sub field value
-								the_sub_field('slide_header_image'); ?>">
+								the_sub_field('slide_header_image_url'); ?>" target="_blank">Launch Site&nbsp;<i class="fa fa-external-link"></i></a> 
+								</span>
+								
+								<img class="desaturate" src="<?php
+								// display a sub field value
+								the_sub_field('slide_header_image'); ?>" alt="<?php
+								// display a sub field value
+								the_field('index_text_01'); ?>">
+								
 							</div>
 							<div class="interior interior_top interior_right" id="<?php the_sub_field('slide_title') ?>">
-								<?php
+								<span class="slide_index"><a href="#" data-slide="1"><?php echo $post->post_title?></a></span>
+								<span class="slide_title"><a><?php
 								// display a sub field value
-								the_sub_field('slide_title'); ?>
+								the_sub_field('slide_title'); ?></a></span>
 								
 								
 							</div>
@@ -20,24 +29,28 @@
 									// loop through the rows of data
 									while ( have_rows('slide_thumbnails') ) : the_row();?>
 										<div class="thumbnails">
-											<img src="<?php
+											<img class="desaturate" src="<?php
 										// display a sub field value
-										the_sub_field('thumbnail_image_01'); ?>">
+										the_sub_field('thumbnail_image_01'); ?>" alt="<?php
+								the_field('index_text_01'); ?> thumbnail">
 										</div>
 										<div class="thumbnails">
-										<img src="<?php
+										<img class="desaturate" src="<?php
 										// display a sub field value
-										the_sub_field('thumbnail_image_02'); ?>">
+										the_sub_field('thumbnail_image_02'); ?>"  alt="<?php
+								the_field('index_text_01'); ?> thumbnail">
 										</div>
 										<div class="thumbnails">
-										<img src="<?php
+										<img class="desaturate" src="<?php
 										// display a sub field value
-										the_sub_field('thumbnail_image_03'); ?>">
+										the_sub_field('thumbnail_image_03'); ?>"  alt="<?php
+								the_field('index_text_01'); ?> thumbnail">
 										</div>
 										<div class="thumbnails">
-										<img src="<?php
+										<img class="desaturate" src="<?php
 										// display a sub field value
-										the_sub_field('thumbnail_image_04'); ?>">
+										the_sub_field('thumbnail_image_04'); ?>"  alt="<?php
+								the_field('index_text_01'); ?> thumbnail">
 										</div>
 							<?php 
 								endwhile;
@@ -52,8 +65,8 @@
 							 
 							</div> 
 							<div class="interior interior_bottom interior_right" id="<?php the_sub_field('slide_description') ?>">
-								<?php
+								<span class="slide_description"><?php
 								// display a sub field value
-								the_sub_field('slide_description'); ?>
+								the_sub_field('slide_description'); ?></span>
 							</div>
 						</div>

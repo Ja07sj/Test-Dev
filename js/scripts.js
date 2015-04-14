@@ -26,3 +26,5 @@ objectFit.polyfill({
         fittype: 'cover', // either contain, cover, fill or none
         disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
 });
+
+

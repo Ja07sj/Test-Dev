@@ -3,10 +3,10 @@
 
 
 <div class="category_slider">
-
-    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<div class="category_slide_home" id="home_slide">
 	</div>
+    <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	
     <div class="category_slide <?php echo $post->post_name?>" id="<?php echo $post->post_name?>">
 		<div class="interior_slider ">
 

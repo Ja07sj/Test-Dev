@@ -19,7 +19,7 @@
 						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 							<?php $x++ ?>
 							
-						<a href="#" data-slide="<?php echo $x ?>" class="<?php echo $post->post_name?>"><?php echo $post->post_title?></a><br/>
+						<a href="#" data-slide="<?php echo $x ?>" class="<?php echo $post->post_name?>"><?php echo $post->post_title?></a>
 						<?php endwhile; ?>
 
 						<?php else: ?>
@@ -99,6 +99,27 @@
 				return false;
 			});
 		});
+		
+		jQuery(function($) {
+		$('.slide_index a').click(function(){
+				var slide = $(this).attr('data-slide');
+				$('.interior_slider').anythingSlider(slide);
+				return false;
+			});
+		});
+		
+		jQuery(function($) {
+			$('#externalNav a').click(function(e) {
+				e.preventDefault();
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+		
+		jQuery(function($) {
+			Shadowbox.init();
+		});
+		
 		</script>
 	</body>
 </html>
