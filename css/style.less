@@ -123,6 +123,7 @@ a:hover {
 }
 a:focus {
 	outline:0;
+	  text-decoration: none;
 }
 a:hover,
 a:active {
@@ -589,15 +590,32 @@ font-size:14px;
 	width:100%;
 	height:auto;
 	padding:@padding_general;
-
+	margin:0;
+	left:0;
+	right:0;
 	}
 	
+	.interior_left .index_title {
+	  left: @padding_general;
+	}
+	
+	.interior_right .index_title {
+	  right: @padding_general;
+	}
+		
 	.thumbnails{
 	height:250px;
 	}
 	
 	.index_title{
+	width:calc(~"100% - " @padding_general ~"* 2");
+	}
+	
+	.interior img{
+	transform: rotate(0deg);
+	transform-origin: 0%;
 	width:100%;
+	height:100%;
 	}
 	
 }
@@ -641,6 +659,7 @@ font-size:14px;
 	.menu_content{
 	max-width:100%;
 	}
+	
 	
 }
 
