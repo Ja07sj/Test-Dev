@@ -9,7 +9,7 @@
 					
 				  </div>
 				  <div>
-					<a href="https://twitter.com/JapongNet"><i class="fa fa-twitter" target="_blank"></i></a>
+					<a href="https://twitter.com/JapongNet" target="_blank"><i class="fa fa-twitter"></i></a>
 				  </div>
 				  <div>
 					<a href="" target="_blank"><i class="fa fa-file-text-o"></i></a>
