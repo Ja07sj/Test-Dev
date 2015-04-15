@@ -15,7 +15,7 @@
 								</span>
 								<img src="<?php
 								// display a sub field value
-								the_field('index_image_01'); ?>" class="desaturate">
+								the_field('index_image_01'); ?>" class="desaturate" alt="<?php echo $post->post_name?>">
 								
 								
 						<?php }
@@ -29,7 +29,7 @@
 						?>
 							<img src="<?php
 								// display a sub field value
-								the_field('index_header_image'); ?>">
+								the_field('index_header_image'); ?>" class="img_normal alt="<?php echo $post->post_name?>"">
 						<?php }
 		 
 						?>
@@ -46,7 +46,7 @@
 								</span>
 								<img src="<?php
 								// display a sub field value
-								the_field('index_image_02'); ?>" class="desaturate">
+								the_field('index_image_02'); ?>" class="desaturate" alt="<?php echo $post->post_name?>">
 								
 						<?php }
 		 
@@ -56,9 +56,9 @@
 						if(get_field('index_header_image'))
 						{
 						?>
-							<h2 class=" <?php echo $post->post_name?>"><a><?php
+							<span class=" <?php echo $post->post_name?> slide_title"><a><?php
 								// display a sub field value
-								the_field('index_header_title'); ?></a></h2>
+								the_field('index_header_title'); ?></a></span>
 						<?php }
 		 
 						?>
@@ -76,7 +76,7 @@
 								</span>
 								<img src="<?php
 								// display a sub field value
-								the_field('index_image_03'); ?>" class="desaturate">
+								the_field('index_image_03'); ?>" class="desaturate" alt="<?php echo $post->post_name?>">
 								
 								
 						<?php }
@@ -90,18 +90,22 @@
 						?>	
 						<div class="thumbnails">
 						<a href="<?php the_field('index_header_thumbnail_01'); ?>" rel="shadowbox[<?php
-								// display a sub field value
-								the_field('index_header_title'); ?>]"><img src="<?php the_field('index_header_thumbnail_01'); ?>" class="desaturate"></a>
-						</div>							<div class="thumbnails">
-							<img src="<?php the_field('index_header_thumbnail_02'); ?>" class="desaturate">
+								the_field('index_header_title'); ?>]"><img src="<?php the_field('index_header_thumbnail_01'); ?>" class="desaturate" alt="<?php echo $post->post_name?>"></a>
+						</div>							
+						<div class="thumbnails">
+							<a href="<?php the_field('index_header_thumbnail_02'); ?>" rel="shadowbox[<?php
+								the_field('index_header_title'); ?>]"><img src="<?php the_field('index_header_thumbnail_02'); ?>" class="desaturate" alt="<?php echo $post->post_name?>"></a>
 						</div>
 						
-						<div class="thumbnails">		<img src="<?php the_field('index_header_thumbnail_03'); ?>" class="desaturate">
+						<div class="thumbnails">		
+							<a href="<?php the_field('index_header_thumbnail_03'); ?>" rel="shadowbox[<?php
+								the_field('index_header_title'); ?>]"><img src="<?php the_field('index_header_thumbnail_03'); ?>" class="desaturate" alt="<?php echo $post->post_name?>"></a>
 						</div>
 						
 						<div class="thumbnails">
-						<img src="<?php the_field('index_header_thumbnail_04'); ?>">
-																			</div>	
+							<a href="<?php the_field('index_header_thumbnail_04'); ?>" rel="shadowbox[<?php
+								the_field('index_header_title'); ?>]"><img src="<?php the_field('index_header_thumbnail_04'); ?>" class="desaturate" alt="<?php echo $post->post_name?>"></a>
+						</div>	
 						<?php }
 		 
 						?>														
@@ -117,7 +121,7 @@
 									</span>
 								<img src="<?php
 								// display a sub field value
-								the_field('index_image_04'); ?>" class="desaturate">
+								the_field('index_image_04'); ?>" class="desaturate" alt="<?php echo $post->post_name?>">
 								
 						
 						<?php }
@@ -137,7 +141,7 @@
 						?>	
 						
 						</div>		
-					
+					 
 				
 				
 			</div> 

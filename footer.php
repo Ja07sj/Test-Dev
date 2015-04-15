@@ -1,15 +1,26 @@
 		</div> <!-- Main -->
 	</div>  <!-- Main Content -->
 		<div class="menu">
+				
+				
+				<div id="social_icons">
+				  <div>
+					<a href="mailto:japong@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a>
+					
+				  </div>
+				  <div>
+					<a href="https://twitter.com/JapongNet"><i class="fa fa-twitter" target="_blank"></i></a>
+				  </div>
+				  <div>
+					<a href="" target="_blank"><i class="fa fa-file-text-o"></i></a>
+				  </div>
+				  <div>
+					<a href="https://www.linkedin.com/profile/view?id=116248278" target="_blank"><i class="fa fa-linkedin"></i></a>
+				  </div>
+				</div>​
 				<div class="menu_content">
 				
-				<header class="header clear" role="banner">
-					
-						
-
-						
-						
-				</header>
+				
 				
 					<div id="externalNav">
 						
