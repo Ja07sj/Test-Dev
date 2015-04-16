@@ -713,6 +713,30 @@ font-size:14px;
 }
 
 
+@media all and (-ms-high-contrast:none) {
+    .interior img{
+	object-fit:cover;
+	width:200%;
+	height:200%;
+	overflow:hidden;
+	transform: rotate(0deg);
+	transform-origin: 0% 0%;
+	max-width:200%;
+	}
+
+	.thumbnails img{
+	object-fit:cover;
+	overflow:hidden;
+	transform: rotate(0deg);
+	transform-origin: 0% 0%;
+	max-width:175%;
+	}
+
+ }
+
+
+
+
 @media only screen and (max-width:1140px) {
 
 }
