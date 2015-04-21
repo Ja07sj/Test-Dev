@@ -126,6 +126,9 @@ input:focus {
 .process a {
   color: #39a44e;
 }
+.process a:hover {
+  color: #4ec265;
+}
 .process_background {
   background-color: #39a44e;
 }
@@ -332,6 +335,7 @@ input:focus {
   transform: rotate(-15deg);
   transform-origin: -69% 94%;
   max-width: 175%;
+  border: 1px solid red !important;
 }
 img.desaturate {
   -webkit-filter: grayscale(100%);
@@ -349,6 +353,13 @@ img.desaturate {
   transform-origin: 0  !important;
   width: 100%  !important;
   height: 100%  !important;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  color: #dddddd;
+  font-size: 12px;
 }
 /* Video */
 .video_wrapper {

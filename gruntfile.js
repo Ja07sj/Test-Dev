@@ -36,14 +36,16 @@ module.exports = function(grunt) {
 		cssmin: {
 		  combine: {
 			files: {
-			  'css/output.css': ['css/polyfill.min.css', 'css/shadowbox.css','css/anythingslider.css', 'css/style.css']
+			  'css/output.css': ['css/polyfill.min.css', 'css/shadowbox.css','css/anythingslider.css',
+			  'css/jquery.mCustomScrollbar.css', 
+			  'css/style.css']
 			}
 		  }
 		},
 		// running `grunt watch` will watch for changes
 		watch: {
 			files: ["./css/*.less", "./js/*.js"],
-			tasks: ["less", "concat", "uglify"]
+			tasks: ["less", "concat", "uglify", "cssmin"]
 		}
     });
 

@@ -116,7 +116,7 @@
 							<?php } ?> 
 							</div> 
 							<div class="interior interior_bottom interior_right">
-								<span class="slide_description"><?php
+								<span class="slide_description scroller"><?php
 								// display a sub field value
 								the_sub_field('slide_description'); ?></span>
 							</div>

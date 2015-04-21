@@ -184,6 +184,10 @@ color:@process !important;
 color:@process;
 }
 
+.process a:hover{
+color:lighten(@process, 10%);
+}
+
 .process_background{
 background-color:@process;
 }
@@ -199,6 +203,7 @@ color:@about;
 .about_background{
 background-color:@about;
 }
+
 
 
 /*------------------------------------*\
@@ -452,7 +457,7 @@ overflow:hidden;
 transform: rotate(-15deg);
 transform-origin: -69% 94%;
 max-width:175%;
-
+border:1px solid red !important;
 }
 
 
@@ -476,6 +481,15 @@ transform:rotate(0deg) !important;
 transform-origin:0  !important;
 width:100%  !important;
 height:100%  !important;
+}
+
+ul{
+list-style-type:none;
+}
+
+li{
+color:@off_white;
+font-size:12px;
 }
 
 

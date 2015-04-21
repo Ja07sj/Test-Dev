@@ -115,6 +115,7 @@
 						if(get_field('index_image_04'))
 						{
 						?>		
+								
 								<span class="index_title <?php echo $post->post_name?>_background"><a href="#" data-slide="5"><?php
 								// display a sub field value
 								the_field('index_text_04'); ?></a>

@@ -12,7 +12,7 @@
 					<a href="https://twitter.com/JapongNet" target="_blank"><i class="fa fa-twitter"></i></a>
 				  </div>
 				  <div>
-					<a href="" target="_blank"><i class="fa fa-file-text-o"></i></a>
+					<a href="<?php echo get_template_directory_uri(); ?>/../../uploads/julian_apong_resume_2015.pdf" target="_blank"><i class="fa fa-file-text-o"></i></a>
 				  </div>
 				  <div>
 					<a href="https://www.linkedin.com/profile/view?id=116248278" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -61,6 +61,8 @@
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->
+		
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mCustomScrollbar.js"></script>
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
 		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
@@ -160,6 +162,13 @@
 		jQuery(function($) {
 			Shadowbox.init();
 		});
+		
+		jQuery(function($){
+        $(window).load(function(){
+            $(".scroller").mCustomScrollbar();
+			
+        });
+    });
 		
 		</script>
 	</body>
