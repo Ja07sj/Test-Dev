@@ -295,6 +295,9 @@ input:focus {
 .slide_description {
   font-size: 14px;
   color: #dddddd;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 .interior_right .index_title {
   right: 0;

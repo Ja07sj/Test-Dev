@@ -133,9 +133,9 @@
 						if(get_field('index_header_description'))
 						{
 						?>	
-						
+						<div class="slide_description scroller">
 						<?php the_field('index_header_description'); ?>
-						
+						</div>
 						
 						<?php }
 		 
