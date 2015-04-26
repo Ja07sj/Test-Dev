@@ -2,7 +2,7 @@
 							<div class="interior interior_top interior_left">
 								
 								
-								<span class="index_title <?php echo $post->post_name?>_background">
+								<span class="index_title_interior <?php echo $post->post_name?>_background">
 									
 									
 									
